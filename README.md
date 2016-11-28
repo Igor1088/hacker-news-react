@@ -2,10 +2,13 @@
 
 Built with React, React-Router, Bootstrap and axios.
 
-Install dependencies:
+Usage:
 
 ```
+git clone https://github.com/Igor1088/hacker-news-react.git
+cd hacker-news-react
 npm install
+npm start
 ```
 
 
