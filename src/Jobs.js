@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 
 class Jobs extends Component {
   constructor(props) {
@@ -31,6 +32,7 @@ class Jobs extends Component {
             <div className="media">
                 <div className="media-body">
                   <a href={i.url} className="media-heading" target="_blank">{i.title}</a>
+                  <p>posted {moment(i.time*1000).fromNow()}</p>
                 </div>
             </div>
           </li>);
