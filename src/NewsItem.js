@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import moment from 'moment';
 
 class NewsItem extends Component {
 
@@ -12,7 +13,7 @@ class NewsItem extends Component {
             </div>
             <div className="media-body">
               <a href={this.props.data.url} className="media-heading" target="_blank">{this.props.data.title}</a>
-              <p>{this.props.data.score} points posted by <Link to={'/user/' + this.props.data.by}>{this.props.data.by}</Link></p>
+              <p>{this.props.data.score} points by <Link to={'/user/' + this.props.data.by}>{this.props.data.by}</Link> <span>posted {moment(this.props.data.time*1000).fromNow()}</span></p>
             </div>
         </div>
       </li>
