@@ -33,7 +33,7 @@ class TopStories extends Component {
     return (
       <div>
         <ul className="list-group">
-          {items ? items : <p>Loading...</p>}
+          {items ? items : <div className="loader"></div>}
         </ul>
         <button className="btn btn-default" onClick={this.handleClick}>More</button>
       </div>
